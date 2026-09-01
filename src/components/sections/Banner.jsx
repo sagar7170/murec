@@ -4,7 +4,7 @@ function Banner() {
   return (
     <div className="banner">
       <video
-        src="/videos/vid2.mp4"
+        src="/videos/bannervid.mp4"
         autoPlay
         muted
         loop
