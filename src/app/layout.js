@@ -1,14 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel, Gotu, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cinzel = Cinzel({
   subsets: ["latin"],
+  variable: "--font-cinzel",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const gotu = Gotu({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-gotu",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -20,9 +26,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={`${cinzel.variable} ${gotu.variable} ${inter.variable}`}>
+        {children}
+      </body>
+
     </html>
   );
 }
